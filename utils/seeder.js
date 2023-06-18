@@ -23,7 +23,7 @@ const seedRooms = async () => {
     console.log(error.message);
     process.exit();
   } finally {
-    mongoose.disconnect(); // Disconnect from the MongoDB server after the operation is complete
+    mongoose.disconnect();
   }
 };
 
