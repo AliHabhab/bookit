@@ -1,11 +1,11 @@
-import React from "react";
+import Home from "../components/Home";
+import Layout from "../components/layout/Layout";
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>Welcome to Next.js!</h1>
-      <p>This is the root page of your Next.js application.</p>
-    </div>
+    <Layout>
+      <Home />
+    </Layout>
   );
 };
 
