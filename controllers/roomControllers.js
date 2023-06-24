@@ -8,12 +8,11 @@ export const allRooms = catchAsyncError(async (req, res) => {
   const roomCount = await Room.countDocuments();
 
   const apiFeatures = new APIFeatures(Room.find(), req.query).search().filter();
-
   let rooms = await apiFeatures.query;
 
   let filteredRoomsCount = rooms.length;
-
   apiFeatures.pagination(resPerPage);
+
   // rooms = await apiFeatures.query;
 
   res
