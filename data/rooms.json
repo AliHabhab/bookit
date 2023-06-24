@@ -14,11 +14,11 @@
       "images": [
         {
           "public_id": "bookit/rooms/1_bzynlv",
-          "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          "url": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg"
         },
         {
           "public_id": "bookit/rooms/2_s1u52n",
-          "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          "url": "https://cdn.pixabay.com/photo/2019/05/28/00/15/indoors-4234071_640.jpg"
         }
       ],
       "category": "King"
@@ -38,7 +38,7 @@
       "images": [
         {
           "public_id": "bookit/rooms/3_quuli7.jpg",
-          "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/3_quuli7.jpg"
+          "url": "https://cdn.pixabay.com/photo/2014/05/21/14/56/bedroom-349701_640.jpg"
         }
       ],
       "category": "Twins"
@@ -58,7 +58,7 @@
       "images": [
         {
           "public_id": "bookit/rooms/4_sju0ql",
-          "url": "https://res.cloudinary.com/bookit/image/upload/v1618590765/bookit/rooms/4_sju0ql.jpg"
+          "url": "https://cdn.pixabay.com/photo/2020/01/15/18/02/room-4768553_640.jpg"
         }
       ],
       "category": "King"
@@ -78,11 +78,11 @@
       "images": [
         {
           "public_id": "bookit/rooms/5_jmydt6",
-          "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/5_jmydt6.jpg"
+          "url": "https://cdn.pixabay.com/photo/2021/10/06/15/05/bedroom-6686061_640.jpg"
         },
         {
           "public_id": "bookit/rooms/6_nwmr5f",
-          "url": "https://res.cloudinary.com/bookit/image/upload/v1618590764/bookit/rooms/6_nwmr5f.jpg"
+          "url": "https://cdn.pixabay.com/photo/2016/04/15/11/43/hotel-1330834_640.jpg"
         }
       ],
       "category": "Single"
@@ -102,7 +102,7 @@
       "images": [
         {
           "public_id": "bookit/rooms/7_hshhzq",
-          "url": "https://res.cloudinary.com/bookit/image/upload/v1618590764/bookit/rooms/7_hshhzq.jpg"
+          "url": "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406_640.jpg"
         }
       ],
       "category": "King"
@@ -122,7 +122,7 @@
       "images": [
         {
           "public_id": "bookit/rooms/8_crn0xy",
-          "url": "https://res.cloudinary.com/bookit/image/upload/v1618590765/bookit/rooms/8_crn0xy.jpg"
+          "url": "https://cdn.pixabay.com/photo/2018/08/17/03/49/apartment-3612030_640.jpg"
         }
       ],
       "category": "Twins"
@@ -142,7 +142,7 @@
       "images": [
         {
           "public_id": "bookit/rooms/9_konrjf",
-          "url": "https://res.cloudinary.com/bookit/image/upload/v1618590849/bookit/rooms/9_konrjf.jpg"
+          "url": "https://cdn.pixabay.com/photo/2016/07/08/23/36/beach-house-1505461_640.jpg"
         }
       ],
       "category": "Single"
@@ -162,7 +162,7 @@
       "images": [
         {
           "public_id": "bookit/rooms/10_w8w8yi",
-          "url": "https://res.cloudinary.com/bookit/image/upload/v1618590840/bookit/rooms/10_w8w8yi.jpg"
+          "url": "https://cdn.pixabay.com/photo/2017/04/28/22/14/room-2269591_640.jpg"
         }
       ],
       "category": "Single"

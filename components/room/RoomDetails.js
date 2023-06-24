@@ -10,22 +10,22 @@ import RoomFeatures from "./RoomFeatures";
 const RoomDetails = () => {
   const dispatch = useDispatch();
   const { room, error } = useSelector((state) => state.roomDetails);
-  console.log(room);
-  //   console.log(error);
 
   useEffect(() => {
     if (error) {
       toast.error(error);
       dispatch(clearErrors());
     }
-  }, []);
+  }, [dispatch, error]);
   return (
     <>
-      <Head>{/* <title>{room.name} - BookIT</title> */}</Head>
+      <Head>
+        <title>{room.name} - BookIT</title>
+      </Head>
       <div className="container container-fluid">
         <h2 className="mt-5">{room.name}</h2>
         <p>{room.address}</p>
-        {/* <p>{room.address}</p> */}
+        <p>{room.address}</p>
 
         <div className="ratings mt-auto mb-3">
           <div className="rating-outer">

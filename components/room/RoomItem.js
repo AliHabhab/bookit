@@ -9,8 +9,14 @@ const RoomItem = ({ room }) => {
         <Image
           className="card-img-top mx-auto"
           src={room.images[0].url}
-          height={170}
-          width=""
+          height={0}
+          width={170}
+        />
+        <img
+          className="card-img-top mx-auto"
+          src={room.images[0].url}
+          width={100}
+          height={100}
         />
         <div className="card-body d-flex flex-column">
           <h5 className="card-title">

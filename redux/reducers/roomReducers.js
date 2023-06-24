@@ -6,7 +6,15 @@ import {
   CLEAR_ERRORS,
 } from "../constants/roomConstants";
 
-export const allRoomsReducer = (state = { rooms: [] }, action) => {
+const initState = {
+  roomsCount: 0,
+  resPerPage: 0,
+  filteredRoomsCount: 0,
+  rooms: [],
+};
+
+
+export const allRoomsReducer = (state = initState, action) => {
   switch (action.type) {
     case ALL_ROOMS_SUCCESS:
       return {
@@ -33,7 +41,7 @@ export const RoomDetailsReducer = (state = { room: {} }, action) => {
   switch (action.type) {
     case ROOM_DETAILS_SUCCESS:
       return {
-        room: action.payload,
+        rooms: action.payload,
       };
     case ROOM_DETAILS_FAIL:
       return {
