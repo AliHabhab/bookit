@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import RoomItem from "./room/RoomItem";
 import { toast } from "react-toastify";
 import { clearErrors } from "../redux/actions/roomActions";
+import Link from "next/link";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const Home = () => {
   const { rooms, resPerPage, roomsCount, filteredRoomsCount, error } =
     useSelector((state) => state.allRooms);
 
-  let { page = 1 } = router.query;
+  let { location, page = 1 } = router.query;
   page = Number(page);
 
   useEffect(() => {
@@ -26,15 +27,21 @@ const Home = () => {
     window.location.href = `/?page=${pageNumber}`;
   };
 
+  let count = roomsCount;
+  if (location) {
+    count = filteredRoomsCount;
+  }
+
   return (
     <>
       <section id="rooms" className="container mt-5">
-        <h2 className="mb-3 ml-2 stays-heading">Stays in New York</h2>
+        <h2 className="mb-3 ml-2 stays-heading">
+          {location ? `Rooms in ${location}` : "All Rooms"}
+        </h2>
 
-        <a href="#" className="ml-2 back-to-search">
-          {" "}
+        <Link href="/search" className="ml-2 back-to-search">
           <i className="fa fa-arrow-left"></i> Back to Search
-        </a>
+        </Link>
         <div> </div>
         <div className="row">
           {!rooms || rooms?.length === 0 ? (
@@ -47,7 +54,7 @@ const Home = () => {
         </div>
       </section>
 
-      {resPerPage < roomsCount && (
+      {resPerPage < count && (
         <div className="d-flex justify-content-center mt-5">
           <Pagination
             activePage={page}
