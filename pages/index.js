@@ -14,8 +14,12 @@ const HomePage = () => {
 
 export default HomePage;
 
-export const getServerSideProps = wrapper.getServerSideProps(() => {
-  async ({ req, store }) => {
-    await store.dispatch(getRooms(req));
-  };
-});
+// Error: Error serializing `.initialState.allRooms.roomsCount` returned from `getServerSideProps` in "/".
+// Reason: `undefined` cannot be serialized as JSON. Please use `null` or omit this value
+
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) =>
+    async ({ req, res, ...etc }) => {
+      await store.dispatch(getRooms(req));
+    }
+);

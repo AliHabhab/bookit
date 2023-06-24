@@ -14,8 +14,16 @@ const RoomDetailsPage = () => {
 
 export default RoomDetailsPage;
 
-export const getServerSideProps = wrapper.getServerSideProps(() => {
-  async ({ req, params, store }) => {
-    await store.dispatch(getRoomDetails(req, params.id));
-  };
-});
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) =>
+    async ({ req, res, ...etc }) => {
+      await store.dispatch(getRoomDetails(req, params.id));
+    }
+);
+
+// export const getServerSideProps = wrapper.getServerSideProps(() => {
+//   async ({ req, params, store }) => {
+//     console.log("test!");
+//     await store.dispatch(getRoomDetails(req, params.id));
+//   };
+// });

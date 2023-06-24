@@ -8,14 +8,14 @@ import { clearErrors } from "../redux/actions/roomActions";
 const Home = () => {
   const dispatch = useDispatch();
   const { rooms, error } = useSelector((state) => state.allRooms);
-  // console.log(error);
 
   useEffect(() => {
     if (error) {
       toast.error(error);
       dispatch(clearErrors());
     }
-  }, []);
+  }, [error, dispatch]);
+
   return (
     <>
       <section id="rooms" className="container mt-5">
@@ -27,7 +27,7 @@ const Home = () => {
         </a>
         <div> </div>
         <div className="row">
-          {rooms && rooms.length === 0 ? (
+          {!rooms || rooms?.length === 0 ? (
             <div className="alert alert-danger">
               <b>No Rooms.</b>
             </div>

@@ -18,7 +18,7 @@ const RoomDetails = () => {
       toast.error(error);
       dispatch(clearErrors());
     }
-  }, []);
+  }, [dispatch, error]);
   return (
     <>
       <Head>{/* <title>{room.name} - BookIT</title> */}</Head>
