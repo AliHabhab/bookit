@@ -13,8 +13,8 @@ const initState = {
   rooms: [],
 };
 
-
 export const allRoomsReducer = (state = initState, action) => {
+  console.log("pauload", action.payload);
   switch (action.type) {
     case ALL_ROOMS_SUCCESS:
       return {

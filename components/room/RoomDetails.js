@@ -10,6 +10,7 @@ import RoomFeatures from "./RoomFeatures";
 const RoomDetails = () => {
   const dispatch = useDispatch();
   const { room, error } = useSelector((state) => state.roomDetails);
+  console.log("!!!!Passed!!!!" + room);
 
   useEffect(() => {
     if (error) {

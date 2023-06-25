@@ -1,12 +1,12 @@
-import Search from "../components/Search";
+import Login from "../components/auth/Login";
 import Layout from "../components/layout/Layout";
 
-const SearchPage = () => {
+const LoginPage = () => {
   return (
     <Layout title="Search Rooms">
-      <Search />
+      <Login />
     </Layout>
   );
 };
 
-export default SearchPage;
+export default LoginPage;
