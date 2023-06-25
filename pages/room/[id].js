@@ -16,7 +16,7 @@ export default RoomDetailsPage;
 
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
-    async ({ req, res, ...etc }) => {
+    async ({ req, res, params, ...etc }) => {
       await store.dispatch(getRoomDetails(req, params.id));
     }
 );

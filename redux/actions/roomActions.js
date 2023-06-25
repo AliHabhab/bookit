@@ -9,22 +9,29 @@ import {
 } from "../constants/roomConstants";
 
 export const getRooms =
-  (req, currentPage = 1, location = "") =>
+  (req, currentPage = 1, location = "", guests = 0, category = "") =>
   async (dispatch) => {
     try {
       const { origin } = absoluteUrl(req);
-      const { data } = await axios.get(
-        `${origin}/api/rooms?page=${currentPage}&location=${location}`
-      );
+
+      let link = `${origin}/api/rooms?page=${currentPage}&location=${location}`;
+
+      if (guests) link = link.concat(`&guestCapacity=${guests}`);
+      if (category) link = link.concat(`&category=${category}`);
+
+      const { data } = await axios.get(link);
 
       dispatch({
         type: ALL_ROOMS_SUCCESS,
         payload: data,
       });
     } catch (error) {
+      console.log({ error });
+      const errorMessage =
+        typeof error === "string" ? error : "something went wrong";
       dispatch({
         type: ALL_ROOMS_FAIL,
-        payload: error.response.data.message,
+        payload: error.response?.data?.message ?? errorMessage,
       });
     }
   };
