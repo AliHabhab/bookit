@@ -16,7 +16,7 @@ export const getRooms =
 
       let link = `${origin}/api/rooms?page=${currentPage}&location=${location}`;
 
-      if (guest) link = link.concat(`&guestCapacity=${guests}`);
+      if (guests) link = link.concat(`&guestCapacity=${guests}`);
       if (category) link = link.concat(`&category=${category}`);
 
       const { data } = await axios.get(link);
@@ -26,6 +26,7 @@ export const getRooms =
         payload: data,
       });
     } catch (error) {
+      console.log({ error });
       const errorMessage =
         typeof error === "string" ? error : "something went wrong";
       dispatch({

@@ -2,7 +2,7 @@
 const nextConfig = {
   env: {
     DB_LOCAL_URI:
-      "mongodb+srv://AliHabhab:eeVY9s1tWFMidXmu@cluster0.z0ux7fc.mongodb.net/?retryWrites=true&w=majority",
+      "mongodb+srv://AliHabhab:KgJDN0jlNbOinYZi@cluster0.z0ux7fc.mongodb.net/?retryWrites=true&w=majority",
     CLOUDINARY_CLOUD_NAME: "bookit",
     CLOUDINARY_API_KEY: "561531929141456",
     CLOUDINARY_API_SECRET: "",

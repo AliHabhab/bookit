@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const rooms = require("../data/rooms.json");
 
 const mongodbUrl =
-  "mongodb+srv://AliHabhab:eeVY9s1tWFMidXmu@cluster0.z0ux7fc.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://AliHabhab:KgJDN0jlNbOinYZi@cluster0.z0ux7fc.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose.connect(mongodbUrl, {
   useNewUrlParser: true,

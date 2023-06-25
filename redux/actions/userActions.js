@@ -17,6 +17,7 @@ export const registerUser = (userData) => async (dispatch) => {
     };
 
     const { data } = await axios.post("/api/auth/register", userData, config);
+    console.log("!!!!!!USER ACTIONS!!!!!!", data);
 
     dispatch({
       type: REGISTER_USER_SUCCESS,
